@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoreAzon
 {
@@ -23,7 +24,7 @@ namespace CoreAzon
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
 
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc();
 
         //    loggerFactory.AddConsole();
 
@@ -36,6 +37,6 @@ namespace CoreAzon
         //    {
         //        await context.Response.WriteAsync("Hello World!");
         //    });
-        //}
+        }
     }
 }
